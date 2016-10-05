@@ -12,16 +12,17 @@
     <emulator>/usr/bin/kvm-spice</emulator>
     <disk type='file' device='cdrom'>
       <source file='/home/user/boot.iso'/>
-      <target dev='hdc'/>
+      <target dev='hdc' bus='virtio'/>
       <readonly/>
     </disk>
     <disk type='file' device='disk'>
       <source file='/etc/libvirt/qemu/image.img'/>
-      <target dev='hda'/>
+      <target dev='hda' bus='virtio'/>
     </disk>
     <interface type='bridge'>
       <source bridge='ovsbr0'/>
       <virtualport type='openvswitch'/>
+      <model type='virtio'/>
     </interface>
     <graphics type='vnc' port='5900' autoport='no' listen='0.0.0.0' keymap='ja'>
       <listen type='address' address='0.0.0.0'/>
