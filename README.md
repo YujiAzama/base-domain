@@ -3,7 +3,7 @@
 ## KVM Installation
 
 ```bash
-$ sudo apt-get install qemu-kvm libvirt-bin virtinst openvswitch-switch
+$ sudo apt-get install qemu-kvm libvirt-bin openvswitch-switch
 $ sudo modprobe vhost_net
 # echo vhost_net >> /etc/modules
 ```
